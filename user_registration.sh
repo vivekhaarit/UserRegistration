@@ -46,7 +46,7 @@ else
 fi
 
 read -p "password: " password
-passwordpattern="[a-zA-Z0-9]{8,}[^a-zA-Z0-9]*"
+passwordpattern="[A-Z]{1,}[a-z0-9]*([^a-zA-Z0-9]{1})[a-z0-9]{6,}"
 if [[ $password =~ $passwordpattern ]]
 then
 	echo "valid password"
