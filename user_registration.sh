@@ -22,3 +22,15 @@ then
 else
 	echo "Invalid last name"
 fi
+
+echo "email:"
+read email
+#emailpattern="(^[a-z]+([.][a-z]?))[@]([a-z0-9]+[.][a-z]{1,})[.][a-z]{1,}?"
+emailpattern="^[a-z]{1,}[0-9]*([.][a-z0-9]*)?[@][a-z0-9]+[.][a-z]{1,}"
+#emailpattern="(^[a-z]+[0-9]*[@][a-z]+[.][a-z]+)"
+if [[ "$email" =~ "$emailpattern" ]]
+then
+	echo "valid email"
+else
+	echo "Invalid email"
+fi
