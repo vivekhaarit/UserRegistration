@@ -34,3 +34,15 @@ then
 else
 	echo "Invalid email"
 fi
+
+echo "Mobile no :"
+read "mobileno"
+mobilenopattern="^[0-9]{2}[ ]?[0-9]{10}"
+if [[ $mobileno =~ $mobilenopattern ]]
+then
+	echo "valid mobile no"
+else
+	echo "invalid mobile no"
+fi
+
+
