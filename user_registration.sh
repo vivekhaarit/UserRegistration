@@ -45,4 +45,13 @@ else
 	echo "invalid mobile no"
 fi
 
+read -p "password: " password
+passwordpattern="[a-zA-Z0-9]{8,}[^a-zA-Z0-9]*"
+if [[ $password =~ $passwordpattern ]]
+then
+	echo "valid password"
+else
+	echo "invalid password"
+fi
+
 
